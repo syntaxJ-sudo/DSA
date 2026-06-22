@@ -1,22 +1,26 @@
 #include<bits/stdc++.h>
-using namespace std;
+using namespace std ; 
 
-void fibonacci( int a , int b , int n ){
+int fibonacci( int n ){
 
-    if( n == 0 ) return ;
+    if( n == 0 ) return 0 ;
+    if( n == 1 ) return 1 ; 
 
-    cout << a << " " ;
-
-    fibonacci( b , a + b , n - 1 ) ;
+    return fibonacci( n - 1 ) + fibonacci( n - 2 ) ;
 }
 
 int main(){
 
-    int n ;
-    cout << "Print Fibonacci numbers up to: " ; 
-    cin >> n ;
-    cout << "Fibonacci Series : " << endl ; 
-    fibonacci( 0 , 1 , n ) ;
+    int n ; 
+    cout << "Print Fibonacci numbers up to: ";
+    cin >> n ; 
 
+    cout << "Your Fibonacci series : " << endl ; 
+
+    for(int i = 0 ; i<n ; ++i){
+
+        cout << fibonacci( i ) << " " ; 
+    }
+    
     return 0 ;
 }
