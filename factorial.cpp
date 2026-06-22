@@ -2,7 +2,6 @@
 using namespace std ; 
 
 int found_factorial(int n ){
-
     if( n == 0 ) return 1 ;
 
     return n * found_factorial(n-1) ;
